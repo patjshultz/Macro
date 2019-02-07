@@ -103,6 +103,8 @@ end
 e2 = etime(clock, t12)
 
 figure(2)
-plot(k, V0(:,5), k, V0(:, 6))
-legend('ybar', 'ybar + 1*sd')
+subplot(2,1,1)
+plot(k, V0(:,0.5*(nk+1)),k)))
+subplot(2,1,2)
+plot(V1(:,0.5*(nk+1)+1),k)
 
