@@ -171,7 +171,7 @@ title('kp policy function');
 xlabel('k') ;
 ylabel('kp');
 legend('kp(k, ybar)', 'kp(k, ybar + \sigma_y)')
-
+mesh(kp)
 
 subplot(2, 1, 2);
 plot(k, c_policy(:, 5), k, c_policy(:, 6));
