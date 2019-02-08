@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.4)  5 FEB 2019 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.4)  7 FEB 2019 21:17
 entering extended mode
 **./problem_set1.tex
 (problem_set1.tex
@@ -363,12 +363,12 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Overfull \hbox (50.70251pt too wide) in paragraph at lines 161--161
+Overfull \hbox (50.70251pt too wide) in paragraph at lines 162--162
 [] 
  []
 
 [3]
-Overfull \hbox (14.36435pt too wide) in paragraph at lines 161--165
+Overfull \hbox (14.36435pt too wide) in paragraph at lines 162--166
 \OT1/cmr/m/n/12 (-20) We clearly see that $\OML/cmm/m/it/12 a$ \OT1/cmr/m/n/12 
 (-20) is a con-stant: $\OML/cmm/m/it/12 a \OT1/cmr/m/n/12 (-20) = []$. Now, we 
 con-jec-ture that $\OML/cmm/m/it/12 v\OT1/cmr/m/n/12 (-20) (\OML/cmm/m/it/12 A[
@@ -376,7 +376,7 @@ con-jec-ture that $\OML/cmm/m/it/12 v\OT1/cmr/m/n/12 (-20) (\OML/cmm/m/it/12 A[
  []
 
 [4]
-Overfull \hbox (12.25323pt too wide) in paragraph at lines 205--207
+Overfull \hbox (12.25323pt too wide) in paragraph at lines 206--208
 \OT1/cmr/m/n/12 (-20) For the con-sump-tion growth pro-cess we make use of the 
 Eu-ler equa-tion $\OML/cmm/m/it/12 u[]\OT1/cmr/m/n/12 (-20) (\OML/cmm/m/it/12 c
 []\OT1/cmr/m/n/12 (-20) ) = \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 (-20) [\OML/cm
@@ -384,7 +384,7 @@ m/m/it/12 A[]u[]\OT1/cmr/m/n/12 (-20) (\OML/cmm/m/it/12 c[]\OT1/cmr/m/n/12 (-20
 ) )]$: 
  []
 
-[5] (problem_set1.aux) ) 
+[5] [6] (problem_set1.aux) ) 
 Here is how much of TeX's memory you used:
  5847 strings out of 493323
  86685 string characters out of 3139067
@@ -393,21 +393,21 @@ Here is how much of TeX's memory you used:
  12884 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,25n,38p,364b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
-x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.p
-fb>
-Output written on problem_set1.pdf (5 pages, 142361 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam
+10.pfb>
+Output written on problem_set1.pdf (6 pages, 147233 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  9729 words of extra memory for PDF output out of 10000 (max. 10000000)
 

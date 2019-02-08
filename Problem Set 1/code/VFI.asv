@@ -11,7 +11,7 @@ ybar = 1;
 beta = 0.95;
 
 % Set grid parameters
-nk =  1000 + 1;
+nk =  50 + 1;
 kbarstate = 0.5 * (nk - 1) + 1;
 kbar = 5;
 kmin = 4;
@@ -69,6 +69,7 @@ for ngridpoints = [5 9]
         [ac] = autocorr(y_markov, 'NumLags', 1);
         markov_summary_stats(2, col) =  ac(2);
         markov_summary_stats(3, col) = sqrt(var((y_markov)));
+        col = col + 1;
         
         % Simulate AR(1) process
         pd = makedist('Normal');
@@ -88,11 +89,10 @@ for ngridpoints = [5 9]
         subplot(2,1,2)
         autocorr(logy_sim)
         
-        ar1_summary_stats(1, col) = mean(logy_sim);
-        [ac] = autocorr(logy_sim, 'NumLags', 1);
+        ar1_summary_stats(1, col) = mean(y_markov);
+        [ac] = autocorr(y_markov, 'NumLags', 1);
         ar1_summary_stats(2, col) =  ac(2);
-        ar1_summary_stats(3, col) = sqrt(var((logy_sim)));
-        col = col + 1;
+        ar1_summary_stats(3, col) = sqrt(var((y_markov)));
     end
     
 end
@@ -170,7 +170,7 @@ plot(k, kp(:, 5),k, kp(:, 6));
 title('kp policy function');
 xlabel('k') ;
 ylabel('kp');
-legend('kp(k, ybar)', 'kp(k, ybar + \sigma_y)')
+legend('kp at ybar', 'kp at ybar + 1*sd')
 
 
 subplot(2, 1, 2);
@@ -178,7 +178,7 @@ plot(k, c_policy(:, 5), k, c_policy(:, 6));
 title('Consumption');
 xlabel('k') ;
 ylabel('c');
-legend('c(ybar)', 'c(ybar + \sigma_y')
+legend('c at ybar', 'c at ybar + 1*sd')
 saveas(gcf, 'c_and_k.png')
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
