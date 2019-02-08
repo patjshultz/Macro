@@ -16,9 +16,8 @@ beta = 0.95;
 
 % Set grid parameters
 nk =  50 + 1;
-kbarstate = 0.5 * (nk - 1) + 1;
 kbar = 5;
-kmin = 4;
+kmin = 0;
 kmax = 6;
 kstep = (kmax - kmin)/(nk - 1);
 
@@ -90,7 +89,7 @@ t12 = clock;
 while err > 0.0001
    
   for i=1:ny
-    V1(:,i) = max(U(:,:,i) + beta*V0(:,i)*ones(1,nk));    % for every income level y_i pick the max along the k grid
+      V1(:,i) = max(U(:,:,i) + beta*V0(:,i)*ones(1,nk));    % for every income level y_i pick the max along the k grid
   end
  
   err = max(max(abs(V1 - V0)))
@@ -103,8 +102,6 @@ end
 e2 = etime(clock, t12)
 
 figure(2)
-subplot(2,1,1)
-plot(k, V0(:,0.5*(nk+1)),k)))
-subplot(2,1,2)
-plot(V1(:,0.5*(nk+1)+1),k)
+plot(k, V0(:,5), k, V0(:, 6))
+legend('ybar', 'ybar + 1*sd')
 

@@ -9,11 +9,6 @@ sigma = 1/2;
 ybar = 1;
 beta = 0.95;
 
-% Choose solution technique
-% Alternatives are
-% discrete(1)
-%technique = discrete1
-
 % Set grid parameters
 nk =  50 + 1;
 kbarstate = 0.5 * (nk - 1) + 1;
@@ -25,40 +20,66 @@ kstep = (kmax - kmin)/(nk - 1);
 k = [kmin: kstep: kmax]';                       % Grid for current wealth
 kp = k;                                         % Grid for next period's wealth
 
-ny = 9;
-[P, y] = quadNorm(ny, 1, 0.1, 0.95);             % Generate transition matrix and y grid
-P = P';
-y = exp(y);
-% set parameters for size of chain
-nsim = 10000;
-income_state = zeros(1,nsim);
-income_state(1)=5; % initial state to start chain
+summary_stats = zeros(3, 6);                    % set up matrix to store summary statistics
+col = 1;
 
-% preallocate memory to store y realizations chosen by Markov chain
-y_markov = zeros(1, nsim);
-y_markov(1) = y(income_state(1));
+for ngridpoints = [5 9]
+    ny = ngridpoints;
+    
+    %[logy,P,d]=tauchen1(ny, 1, 0.95 , 0.1, 4); % choose 4 std dev for grid of 9 to have each point at one std dev
 
-% Markov chains
-for i=2:nsim
-    % select row that specifies the distribution associated with current state 
-    markov_dist = P(income_state(i - 1), :); 
+    [P, logy] = quadNorm(ny, 1, 0.1, 0.99);            % Generate transition matrix and y grid
+    P = P';
     
-    % calculate cumulative distribution of switching to any state
-    cumulative_distribution = cumsum(markov_dist);
+    y = exp(logy);
+    % y = logy to check if rho = 0.95
     
-    % randomly generate probability threshold
-    q = rand();
-    
-    % select new state
-    income_state(i) = find(cumulative_distribution > q, 1);
-    y_markov(i) = y(income_state(i));
+    for n = [1000 5000 100000]    
+        % set parameters for size of chain
+        nsim = n;
+        income_state = zeros(1,nsim);
+        income_state(1) = 5; % initial state to start chain
+
+        % preallocate memory to store y realizations chosen by Markov chain
+        y_markov = zeros(1, nsim);
+        y_markov(1) = y(income_state(1));
+
+        % Markov chains
+        for i = 2:nsim
+            % select row that specifies the distribution associated with current state 
+            markov_dist = P(income_state(i - 1), :); 
+
+            % calculate cumulative distribution of switching to any state
+            cumulative_distribution = cumsum(markov_dist);
+
+            % randomly generate probability threshold
+            q = rand();
+
+            % select new state
+            income_state(i) = find(cumulative_distribution > q, 1);
+            y_markov(i) = y(income_state(i));
+        end
+
+        % calculate summary statistics of our markov chain
+
+        summary_stats(1, col) = mean(y_markov);                    % store mean
+        [ac] = autocorr(y_markov, 'NumLags', 1);
+        summary_stats(2, col) =  ac(2);      % store autocorr
+        summary_stats(3, col) = sqrt(var((y_markov)));            % store var
+        col = col + 1;
+    end
+
 end
 
-% calculate summary statistics of our markov chain
-mean(y_markov)
-autocorr(y_markov);
-sqrt(var(y_markov))
-y_sigma = mean(y_markov + sqrt(var(y_markov)));
+
+% model = arima('Constant',0.05,'AR',{0.95},'Variance',sqrt(0.1));
+% rng('default')
+% ysim = simulate(log(model),1000);
+% 
+% figure
+% plot(ysim)
+% xlim([0,1000])
+% title('Simulated AR(1) Process')
 
 % Compute accurate solution to test quality of the procedure
 ho = ybar/(1 - 1/r);
@@ -90,7 +111,16 @@ t12 = clock;
 while err > 0.0001
    
   for i=1:ny
-    V1(:,i) = max(U(:,:,i) + beta*V0(:,i)*ones(1,nk));    % for every income level y_i pick the max along the k grid
+    % use transition matrix to generate distribution for each y
+    dist = P(i, :);                                    
+    
+    % Calculate the expected value of V0
+    EV0 = dist(1) * V0(:, 1);                           % calculate the first element in the sum to get expected value of V0
+    for n = 2:ny                                        % start at two since we took care of first element outside of loop
+        EV0 = EV0 + dist(n) * V0(:, n);
+    end
+    
+    V1(:, i) = max(U(:, :, i) + beta * EV0 * ones(1, nk));      % for every income level y_i pick the max along the k grid
   end
  
   err = max(max(abs(V1 - V0)))

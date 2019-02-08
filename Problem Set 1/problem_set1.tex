@@ -47,6 +47,7 @@
 \author{Patrick Shultz and Felix Nockher}
 \date{\today}
 \maketitle 
+\textbf{Part I: Consumption Choices}
 \section*{Problem 1}
 \paragraph{a)}
 Consumer maximizes
@@ -213,6 +214,28 @@ E_t\left[ \frac{c_{t+1}}{c_{t}} \right] &= \beta E_t\left[ A_{t+1} \right]\\
 log E_t\left[ \frac{c_{t+1}}{c_{t}} \right] &= log \beta + \mu_A + \frac{1}{2}\sigma^2
 \end{align*}
 
+\textbf{Part II: Numerical Methods}
+\begin{equation*}
+U = E_0\left[ \sum_{t = 0}^{\infty} \beta^t u(c_t)\right] 
+\end{equation*}
+subject to $c_t = Rk_t + y_t - k_{t+1}$ and $ k_0 > 0$. 
+\section{Problem 1} Assume that $log(y)$ follows $\log(y_{t+1}) = 0.05 + 0.95 \log(y_t) + 0.1\epsilon$. 
+The theoretical moments for the process are given by 
+\begin{equation*}
+\begin{split}
+	\log(y_{t+1}) &= (0.05 + \epsilon_t) + 0.95 (0.05 + \epsilon_{t-1}) + 0.95^2(0.05 + \epsilon_{t-2}) + ...\\
+	&= \left[0.05/(1-0.05)\right] + \epsilon_t + \phi \epsilon_{t-1} + ...
+\end{split}
+\end{equation*}
+Thus, $E\left[\log(y_t)\right] = 1$. Variance is given by
+\begin{equation*}
+	\begin{split}
+		E(\log(y_t) - E\left[\log(y_t)\right])^2 &= E(\epsilon_t + 0.05\epsilon_{t-1} +...)^2\\
+		&= (1 +0.05^2 + 0.05^4 + ...) \sigma\\
+		&= \sigma^2/(1-0.05^2)	
+	\end{split}
+\end{equation*}
+When $\sigma = 0.1$, we get $0.1/(1-0.05^2) $.
 \end{document}
 
 
