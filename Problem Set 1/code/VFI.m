@@ -11,7 +11,7 @@ ybar = 1;
 beta = 0.95;
 
 % Set grid parameters
-nk =  1000 + 1;
+nk =  51 + 1;
 kbarstate = 0.5 * (nk - 1) + 1;
 kbar = 5;
 kmin = 4;
@@ -23,7 +23,7 @@ kp = k;                                         % Grid for next period's wealth
 
 markov_summary_stats = zeros(3, 6);                    % set up matrix to store summary statistics
 ar1_summary_stats = zeros(3, 6);
-%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Markov simulation of y process %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 col = 1;
@@ -81,13 +81,7 @@ for ngridpoints = [5 9]
             logy_sim(1,i) = 0.05 + 0.95*logy_sim(1,i-1) + 0.1*epsilon(1,i);
         end
         
-        % plot AR(1) process
-        subplot(2,1,1)
-        plot(logy_sim)
-        title('Sample Path')
-        subplot(2,1,2)
-        autocorr(logy_sim)
-        
+           
         ar1_summary_stats(1, col) = mean(logy_sim);
         [ac] = autocorr(logy_sim, 'NumLags', 1);
         ar1_summary_stats(2, col) =  ac(2);
@@ -149,10 +143,11 @@ end
 
 e2 = etime(clock, t12)
 
-figure(2)
 plot(k, V0(:,5), k, V0(:, 6))
 legend('ybar', 'ybar + 1*sd')
-saveas(gcf, 'value_functions.png')
+xlabel('k');
+ylabel('Value function');
+saveas(gcf, 'value_functions_51_grid_points.png')
 
 % calculate policy function for kp
 kp = k(kpopt_ind);
@@ -162,7 +157,7 @@ c_policy = zeros(nk, ny);
 
 % calculate consumption
 for i = 1:ny
-    c_policy(:, i) = y(i)*ones(nk, 1) + r * k - kp(:, i)
+    c_policy(:, i) = y(i)*ones(nk, 1) + r * k - kp(:, i);
 end
 
 subplot(2, 1, 1);
@@ -171,7 +166,6 @@ title('kp policy function');
 xlabel('k') ;
 ylabel('kp');
 legend('kp(k, ybar)', 'kp(k, ybar + \sigma_y)')
-mesh(kp)
 
 subplot(2, 1, 2);
 plot(k, c_policy(:, 5), k, c_policy(:, 6));
@@ -179,7 +173,7 @@ title('Consumption');
 xlabel('k') ;
 ylabel('c');
 legend('c(ybar)', 'c(ybar + \sigma_y')
-saveas(gcf, 'c_and_k.png')
+saveas(gcf, 'c_and_k_101.png')
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % simulate  economy with given y process and policy functions %
@@ -232,23 +226,6 @@ for n = [5500, 10500]
     % calculate consumption growth 
     c_growth = log(c_sim(2:length(c_sim))) - log(c_sim(1:length(c_sim)-1));
     
-    subplot(2, 2, 1);
-    plot(y_markov);
-    title('Simulated y process')
-    
-    subplot(2, 2, 2);
-    plot(kp_sim);
-    title('Simulated kp process');
-    
-    subplot(2,2,3);
-    plot(c_sim);
-    title('Simulated c process');
-    
-    subplot(2,2,4);
-    plot(c_growth);
-    title('Simulated c growth');
-    saveas(gcf, 'simulation.png')
-
     simulation_summary_stats(1, j) = mean(c_growth);
     simulation_summary_stats(2, j) = std(c_growth);
     acf = autocorr(c_growth, 'NumLags', 1);

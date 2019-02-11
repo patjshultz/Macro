@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.4)  7 FEB 2019 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.4)  10 FEB 2019 15:59
 entering extended mode
 **./problem_set1.tex
 (problem_set1.tex
@@ -6,8 +6,8 @@ LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -194,33 +194,40 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
-Package: geometry 2010/09/12 v5.6 Page Geometry
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-\Gm@cnth=\count110
-\Gm@cntv=\count111
-\c@Gm@tempcnt=\count112
-\Gm@bindingoffset=\dimen119
-\Gm@wd@mp=\dimen120
-\Gm@odd@mp=\dimen121
-\Gm@even@mp=\dimen122
-\Gm@layoutwidth=\dimen123
-\Gm@layoutheight=\dimen124
-\Gm@layouthoffset=\dimen125
-\Gm@layoutvoffset=\dimen126
-\Gm@dimlist=\toks28
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2018/05/01 v3.3-147 Customizing captions (AR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2018/05/27 v1.8a caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@tempdima=\dimen122
+\caption@indent=\dimen123
+\caption@parindent=\dimen124
+\caption@hangindent=\dimen125
+)
+\c@ContinuedFloat=\count110
+Package caption Info: listings package is loaded.
+)
+\c@KVtest=\count111
+\sf@farskip=\skip51
+\sf@captopadj=\dimen126
+\sf@capskip=\skip52
+\sf@nearskip=\skip53
+\c@subfigure=\count112
+\c@subfigure@save=\count113
+\c@lofdepth=\count114
+\c@subtable=\count115
+\c@subtable@save=\count116
+\c@lotdepth=\count117
+\sf@top=\skip54
+\sf@bottom=\skip55
+)
 
 LaTeX Warning: Unused global option(s):
     [letter].
@@ -228,31 +235,31 @@ LaTeX Warning: Unused global option(s):
 (problem_set1.aux)
 \openout1 = `problem_set1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
+\scratchcounter=\count118
 \scratchdimen=\dimen127
 \scratchbox=\box30
-\nofMPsegments=\count114
-\nofMParguments=\count115
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count116
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count121
 \MPscratchDim=\dimen128
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks29
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -260,6 +267,9 @@ Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -295,7 +305,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \microtypecontext on input line 45.
+LaTeX Info: Redefining \microtypecontext on input line 47.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -310,50 +320,19 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-\c@lstlisting=\count119
+\c@lstlisting=\count124
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 51.
 
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
-* v-part:(T,H,B)=(56.9055pt, 652.70622pt, 85.35826pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=472.03123pt
-* \textheight=652.70622pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-15.36449pt
-* \headheight=0.0pt
-* \headsep=0.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 49.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 49.
+LaTeX Font Info:    Try loading font information for U+msb on input line 51.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -362,52 +341,148 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Overfull \hbox (50.70251pt too wide) in paragraph at lines 162--162
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+Overfull \hbox (48.6899pt too wide) in paragraph at lines 181--181
 [] 
  []
 
-[3]
-Overfull \hbox (14.36435pt too wide) in paragraph at lines 162--166
-\OT1/cmr/m/n/12 (-20) We clearly see that $\OML/cmm/m/it/12 a$ \OT1/cmr/m/n/12 
-(-20) is a con-stant: $\OML/cmm/m/it/12 a \OT1/cmr/m/n/12 (-20) = []$. Now, we 
-con-jec-ture that $\OML/cmm/m/it/12 v\OT1/cmr/m/n/12 (-20) (\OML/cmm/m/it/12 A[
-]\OT1/cmr/m/n/12 (-20) ) = \OML/cmm/m/it/12 E[] []$
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--183
+
  []
 
-[4]
-Overfull \hbox (12.25323pt too wide) in paragraph at lines 206--208
-\OT1/cmr/m/n/12 (-20) For the con-sump-tion growth pro-cess we make use of the 
-Eu-ler equa-tion $\OML/cmm/m/it/12 u[]\OT1/cmr/m/n/12 (-20) (\OML/cmm/m/it/12 c
-[]\OT1/cmr/m/n/12 (-20) ) = \OML/cmm/m/it/12 E[]\OT1/cmr/m/n/12 (-20) [\OML/cm
-m/m/it/12 A[]u[]\OT1/cmr/m/n/12 (-20) (\OML/cmm/m/it/12 c[]\OT1/cmr/m/n/12 (-20
-) )]$: 
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
+
  []
 
-[5] [6] (problem_set1.aux) ) 
+
+Package caption Warning: \label without proper reference on input line 268.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:markov_chain_tab' on page 6 undefined on input li
+ne 265.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
+
+ []
+
+[6]
+Package epstopdf Info: Source file: <value_function_51_gridpoints.eps>
+(epstopdf)                    date: 2019-02-10 15:19:49
+(epstopdf)                    size: 19875 bytes
+(epstopdf)             Output file: <value_function_51_gridpoints-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2019-02-10 15:24:45
+(epstopdf)                    size: 4492 bytes
+(epstopdf)             Command: <epstopdf --outfile=value_function_51_gridpoint
+s-eps-converted-to.pdf value_function_51_gridpoints.eps>
+(epstopdf)             \includegraphics on input line 290.
+Package epstopdf Info: Output file is already uptodate.
+
+<value_function_51_gridpoints-eps-converted-to.pdf, id=34, 421.575pt x 316.1812
+4pt>
+File: value_function_51_gridpoints-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use value_function_51_gridpoints-eps-converted-to.pdf>
+Package pdftex.def Info: value_function_51_gridpoints-eps-converted-to.pdf used
+ on input line 290.
+(pdftex.def)             Requested size: 240.9049pt x 180.67499pt.
+Package epstopdf Info: Source file: <value_function_101_gridpoints.eps>
+(epstopdf)                    date: 2019-02-10 15:20:49
+(epstopdf)                    size: 21512 bytes
+(epstopdf)             Output file: <value_function_101_gridpoints-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2019-02-10 15:24:46
+(epstopdf)                    size: 5237 bytes
+(epstopdf)             Command: <epstopdf --outfile=value_function_101_gridpoin
+ts-eps-converted-to.pdf value_function_101_gridpoints.eps>
+(epstopdf)             \includegraphics on input line 297.
+Package epstopdf Info: Output file is already uptodate.
+
+<value_function_101_gridpoints-eps-converted-to.pdf, id=35, 421.575pt x 316.181
+24pt>
+File: value_function_101_gridpoints-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use value_function_101_gridpoints-eps-converted-to.pdf>
+Package pdftex.def Info: value_function_101_gridpoints-eps-converted-to.pdf use
+d on input line 297.
+(pdftex.def)             Requested size: 240.9049pt x 180.67499pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
+
+ []
+
+Package epstopdf Info: Source file: <k_and_p_51_gridpoints.eps>
+(epstopdf)                    date: 2019-02-10 15:36:34
+(epstopdf)                    size: 29561 bytes
+(epstopdf)             Output file: <k_and_p_51_gridpoints-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2019-02-10 15:38:20
+(epstopdf)                    size: 6561 bytes
+(epstopdf)             Command: <epstopdf --outfile=k_and_p_51_gridpoints-eps-c
+onverted-to.pdf k_and_p_51_gridpoints.eps>
+(epstopdf)             \includegraphics on input line 308.
+Package epstopdf Info: Output file is already uptodate.
+<k_and_p_51_gridpoints-eps-converted-to.pdf, id=36, 421.575pt x 316.18124pt>
+File: k_and_p_51_gridpoints-eps-converted-to.pdf Graphic file (type pdf)
+
+<use k_and_p_51_gridpoints-eps-converted-to.pdf>
+Package pdftex.def Info: k_and_p_51_gridpoints-eps-converted-to.pdf used on inp
+ut line 308.
+(pdftex.def)             Requested size: 240.9049pt x 180.67499pt.
+Package epstopdf Info: Source file: <k_and_p_101_gridpoints.eps>
+(epstopdf)                    date: 2019-02-10 15:37:18
+(epstopdf)                    size: 32763 bytes
+(epstopdf)             Output file: <k_and_p_101_gridpoints-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2019-02-10 15:38:21
+(epstopdf)                    size: 7886 bytes
+(epstopdf)             Command: <epstopdf --outfile=k_and_p_101_gridpoints-eps-
+converted-to.pdf k_and_p_101_gridpoints.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+
+<k_and_p_101_gridpoints-eps-converted-to.pdf, id=37, 421.575pt x 316.18124pt>
+File: k_and_p_101_gridpoints-eps-converted-to.pdf Graphic file (type pdf)
+
+<use k_and_p_101_gridpoints-eps-converted-to.pdf>
+Package pdftex.def Info: k_and_p_101_gridpoints-eps-converted-to.pdf used on in
+put line 315.
+(pdftex.def)             Requested size: 240.9049pt x 180.67499pt.
+ [7 <./value_function_51_gridpoints-eps-converted-to.pdf>] [8 <./value_function
+_101_gridpoints-eps-converted-to.pdf> <./k_and_p_51_gridpoints-eps-converted-to
+.pdf>] [9 <./k_and_p_101_gridpoints-eps-converted-to.pdf>] (problem_set1.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5847 strings out of 493323
- 86685 string characters out of 3139067
- 201483 words of memory out of 3000000
- 9270 multiletter control sequences out of 15000+200000
- 12884 words of font info for 63 fonts, out of 3000000 for 9000
+ 6611 strings out of 493323
+ 102396 string characters out of 3139067
+ 209334 words of memory out of 3000000
+ 10027 multiletter control sequences out of 15000+200000
+ 12238 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,25n,38p,364b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam
-10.pfb>
-Output written on problem_set1.pdf (6 pages, 147233 bytes).
+ 44i,20n,42p,627b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on problem_set1.pdf (9 pages, 195453 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 9729 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7701 words of extra memory for PDF output out of 10000 (max. 10000000)
 
