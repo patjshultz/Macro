@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.4)  10 FEB 2019 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.4)  12 FEB 2019 22:39
 entering extended mode
 **./problem_set1.tex
 (problem_set1.tex
@@ -357,132 +357,186 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--239
  []
 
 
-Package caption Warning: \label without proper reference on input line 268.
-See the caption package documentation for explanation.
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+
+ []
 
 
-LaTeX Warning: Reference `tab:markov_chain_tab' on page 6 undefined on input li
-ne 265.
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
+
+ []
+
 Package epstopdf Info: Source file: <value_function_51_gridpoints.eps>
-(epstopdf)                    date: 2019-02-10 15:19:49
-(epstopdf)                    size: 19875 bytes
+(epstopdf)                    date: 2019-02-12 21:46:48
+(epstopdf)                    size: 19800 bytes
 (epstopdf)             Output file: <value_function_51_gridpoints-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2019-02-10 15:24:45
-(epstopdf)                    size: 4492 bytes
+(epstopdf)                    date: 2019-02-12 21:47:22
+(epstopdf)                    size: 4478 bytes
 (epstopdf)             Command: <epstopdf --outfile=value_function_51_gridpoint
 s-eps-converted-to.pdf value_function_51_gridpoints.eps>
-(epstopdf)             \includegraphics on input line 290.
+(epstopdf)             \includegraphics on input line 302.
 Package epstopdf Info: Output file is already uptodate.
 
-<value_function_51_gridpoints-eps-converted-to.pdf, id=34, 421.575pt x 316.1812
+<value_function_51_gridpoints-eps-converted-to.pdf, id=33, 421.575pt x 316.1812
 4pt>
 File: value_function_51_gridpoints-eps-converted-to.pdf Graphic file (type pdf)
 
  <use value_function_51_gridpoints-eps-converted-to.pdf>
 Package pdftex.def Info: value_function_51_gridpoints-eps-converted-to.pdf used
- on input line 290.
+ on input line 302.
 (pdftex.def)             Requested size: 240.9049pt x 180.67499pt.
 Package epstopdf Info: Source file: <value_function_101_gridpoints.eps>
-(epstopdf)                    date: 2019-02-10 15:20:49
-(epstopdf)                    size: 21512 bytes
+(epstopdf)                    date: 2019-02-12 22:03:29
+(epstopdf)                    size: 21427 bytes
 (epstopdf)             Output file: <value_function_101_gridpoints-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2019-02-10 15:24:46
-(epstopdf)                    size: 5237 bytes
+(epstopdf)                    date: 2019-02-12 22:03:34
+(epstopdf)                    size: 5200 bytes
 (epstopdf)             Command: <epstopdf --outfile=value_function_101_gridpoin
 ts-eps-converted-to.pdf value_function_101_gridpoints.eps>
-(epstopdf)             \includegraphics on input line 297.
+(epstopdf)             \includegraphics on input line 309.
 Package epstopdf Info: Output file is already uptodate.
 
-<value_function_101_gridpoints-eps-converted-to.pdf, id=35, 421.575pt x 316.181
+<value_function_101_gridpoints-eps-converted-to.pdf, id=34, 421.575pt x 316.181
 24pt>
 File: value_function_101_gridpoints-eps-converted-to.pdf Graphic file (type pdf
 )
  <use value_function_101_gridpoints-eps-converted-to.pdf>
 Package pdftex.def Info: value_function_101_gridpoints-eps-converted-to.pdf use
-d on input line 297.
+d on input line 309.
 (pdftex.def)             Requested size: 240.9049pt x 180.67499pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
-Package epstopdf Info: Source file: <k_and_p_51_gridpoints.eps>
-(epstopdf)                    date: 2019-02-10 15:36:34
-(epstopdf)                    size: 29561 bytes
-(epstopdf)             Output file: <k_and_p_51_gridpoints-eps-converted-to.pdf
->
-(epstopdf)                    date: 2019-02-10 15:38:20
-(epstopdf)                    size: 6561 bytes
-(epstopdf)             Command: <epstopdf --outfile=k_and_p_51_gridpoints-eps-c
-onverted-to.pdf k_and_p_51_gridpoints.eps>
-(epstopdf)             \includegraphics on input line 308.
-Package epstopdf Info: Output file is already uptodate.
-<k_and_p_51_gridpoints-eps-converted-to.pdf, id=36, 421.575pt x 316.18124pt>
-File: k_and_p_51_gridpoints-eps-converted-to.pdf Graphic file (type pdf)
 
-<use k_and_p_51_gridpoints-eps-converted-to.pdf>
-Package pdftex.def Info: k_and_p_51_gridpoints-eps-converted-to.pdf used on inp
-ut line 308.
-(pdftex.def)             Requested size: 240.9049pt x 180.67499pt.
-Package epstopdf Info: Source file: <k_and_p_101_gridpoints.eps>
-(epstopdf)                    date: 2019-02-10 15:37:18
-(epstopdf)                    size: 32763 bytes
-(epstopdf)             Output file: <k_and_p_101_gridpoints-eps-converted-to.pd
-f>
-(epstopdf)                    date: 2019-02-10 15:38:21
-(epstopdf)                    size: 7886 bytes
-(epstopdf)             Command: <epstopdf --outfile=k_and_p_101_gridpoints-eps-
-converted-to.pdf k_and_p_101_gridpoints.eps>
-(epstopdf)             \includegraphics on input line 315.
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
+[7]
+Package epstopdf Info: Source file: <opt_c_and_kp_51_gridpoints.eps>
+(epstopdf)                    date: 2019-02-12 22:09:10
+(epstopdf)                    size: 30647 bytes
+(epstopdf)             Output file: <opt_c_and_kp_51_gridpoints-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2019-02-12 22:10:47
+(epstopdf)                    size: 6491 bytes
+(epstopdf)             Command: <epstopdf --outfile=opt_c_and_kp_51_gridpoints-
+eps-converted-to.pdf opt_c_and_kp_51_gridpoints.eps>
+(epstopdf)             \includegraphics on input line 322.
 Package epstopdf Info: Output file is already uptodate.
 
-<k_and_p_101_gridpoints-eps-converted-to.pdf, id=37, 421.575pt x 316.18124pt>
-File: k_and_p_101_gridpoints-eps-converted-to.pdf Graphic file (type pdf)
+<opt_c_and_kp_51_gridpoints-eps-converted-to.pdf, id=40, 459.7175pt x 351.3125p
+t>
+File: opt_c_and_kp_51_gridpoints-eps-converted-to.pdf Graphic file (type pdf)
+ <use opt_c_and_kp_51_gridpoints-eps-converted-to.pdf>
+Package pdftex.def Info: opt_c_and_kp_51_gridpoints-eps-converted-to.pdf used o
+n input line 322.
+(pdftex.def)             Requested size: 331.01038pt x 252.94499pt.
+Package epstopdf Info: Source file: <opt_c_and_kp_101_gridpoints.eps>
+(epstopdf)                    date: 2019-02-12 22:09:43
+(epstopdf)                    size: 33864 bytes
+(epstopdf)             Output file: <opt_c_and_kp_101_gridpoints-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2019-02-12 22:10:49
+(epstopdf)                    size: 7875 bytes
+(epstopdf)             Command: <epstopdf --outfile=opt_c_and_kp_101_gridpoints
+-eps-converted-to.pdf opt_c_and_kp_101_gridpoints.eps>
+(epstopdf)             \includegraphics on input line 329.
+Package epstopdf Info: Output file is already uptodate.
 
-<use k_and_p_101_gridpoints-eps-converted-to.pdf>
-Package pdftex.def Info: k_and_p_101_gridpoints-eps-converted-to.pdf used on in
-put line 315.
-(pdftex.def)             Requested size: 240.9049pt x 180.67499pt.
- [7 <./value_function_51_gridpoints-eps-converted-to.pdf>] [8 <./value_function
-_101_gridpoints-eps-converted-to.pdf> <./k_and_p_51_gridpoints-eps-converted-to
-.pdf>] [9 <./k_and_p_101_gridpoints-eps-converted-to.pdf>] (problem_set1.aux)
+<opt_c_and_kp_101_gridpoints-eps-converted-to.pdf, id=41, 459.7175pt x 364.3612
+5pt>
+File: opt_c_and_kp_101_gridpoints-eps-converted-to.pdf Graphic file (type pdf)
+ <use opt_c_and_kp_101_gridpoints-eps-converted-to.pdf>
+Package pdftex.def Info: opt_c_and_kp_101_gridpoints-eps-converted-to.pdf used 
+on input line 329.
+(pdftex.def)             Requested size: 319.14146pt x 252.94499pt.
+Package epstopdf Info: Source file: <opt_c_and_kp_2001_gridpoints.eps>
+(epstopdf)                    date: 2019-02-12 22:18:05
+(epstopdf)                    size: 166677 bytes
+(epstopdf)             Output file: <opt_c_and_kp_2001_gridpoints-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2019-02-12 22:21:19
+(epstopdf)                    size: 61641 bytes
+(epstopdf)             Command: <epstopdf --outfile=opt_c_and_kp_2001_gridpoint
+s-eps-converted-to.pdf opt_c_and_kp_2001_gridpoints.eps>
+(epstopdf)             \includegraphics on input line 336.
+Package epstopdf Info: Output file is already uptodate.
 
-LaTeX Warning: There were undefined references.
+<opt_c_and_kp_2001_gridpoints-eps-converted-to.pdf, id=42, 421.575pt x 316.1812
+4pt>
+File: opt_c_and_kp_2001_gridpoints-eps-converted-to.pdf Graphic file (type pdf)
 
- ) 
+ <use opt_c_and_kp_2001_gridpoints-eps-converted-to.pdf>
+Package pdftex.def Info: opt_c_and_kp_2001_gridpoints-eps-converted-to.pdf used
+ on input line 336.
+(pdftex.def)             Requested size: 337.26688pt x 252.94499pt.
+ [8 <./value_function_51_gridpoints-eps-converted-to.pdf> <./value_function_101
+_gridpoints-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+
+ []
+
+[9 <./opt_c_and_kp_51_gridpoints-eps-converted-to.pdf> <./opt_c_and_kp_101_grid
+points-eps-converted-to.pdf>]
+<simulations5500.png, id=63, 421.575pt x 316.0608pt>
+File: simulations5500.png Graphic file (type png)
+ <use simulations5500.png>
+Package pdftex.def Info: simulations5500.png used on input line 363.
+(pdftex.def)             Requested size: 337.40196pt x 252.94499pt.
+
+<simulations10500.png, id=64, 421.575pt x 316.0608pt>
+File: simulations10500.png Graphic file (type png)
+
+<use simulations10500.png>
+Package pdftex.def Info: simulations10500.png used on input line 370.
+(pdftex.def)             Requested size: 337.40196pt x 252.94499pt.
+ [10 <./opt_c_and_kp_2001_gridpoints-eps-converted-to.pdf>] [11 <./simulations5
+500.png (PNG copy)> <./simulations10500.png (PNG copy)>] (problem_set1.aux) ) 
 Here is how much of TeX's memory you used:
- 6611 strings out of 493323
- 102396 string characters out of 3139067
- 209334 words of memory out of 3000000
- 10027 multiletter control sequences out of 15000+200000
- 12238 words of font info for 61 fonts, out of 3000000 for 9000
+ 6637 strings out of 493323
+ 103050 string characters out of 3139067
+ 209291 words of memory out of 3000000
+ 10043 multiletter control sequences out of 15000+200000
+ 12385 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,20n,42p,627b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on problem_set1.pdf (9 pages, 195453 bytes).
+ 44i,20n,42p,627b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb>
+Output written on problem_set1.pdf (11 pages, 357448 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 7701 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7716 words of extra memory for PDF output out of 10000 (max. 10000000)
 

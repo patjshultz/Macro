@@ -244,12 +244,19 @@ We consider the following problem
 U = E_0\left[ \sum_{t = 0}^{\infty} \beta^t u(c_t)\right] 
 \end{equation*}
 subject to $c_t = Rk_t + y_t - k_{t+1}$ and $ k_0 > 0$. 
-\section*{Problem 1} Assume that $\log(y)$ follows $\log(y_{t+1}) = 0.05 + 0.95 \log(y_t) + 0.1\epsilon$. 
-We first simulate this AR(1) process for $1000, 5000,$and $10000$ steps. The results are shown in the  table below. This provides a baseline for our Markov Simulations of the process. 
+Assume that $\log(y)$ follows $\log(y_{t+1}) = 0.05 + 0.95 \log(y_t) + 0.1\epsilon$. 
+\section*{Problem 1} 
+
+\paragraph{a)} Construct a $5$ and $9$ point discrete Markov Chain approximation to the process, using a grid with equally spaced points that is centered around the long run mean. \\
+
+See code attached to problem set for the implementation.\\
+
+\paragraph{b)} Simulate your Markov chains. Compute the long run mean, serial correlation, and volatility of this simulated process and check the accuracy of your approximation with $1,000, 5,000, 10,000$ periods. \\
+
+We first simulate the given AR(1) process for $1000, 5000,$and $10000$ steps. This provides a baseline for our Markov Simulations of the process. The mean, serial correlation, and volatility of the process are reported in Table \ref{table:ar1_summary}.
 
 \begin{table}[!htbp] \centering 
-	\label{tab:ar1_summary} 
-	\begin{tabular}{@{\extracolsep{5pt}} cccc} 
+	\begin{tabular}{@{\extracolsep{5pt}} c|ccc} 
 		\\[-1.8ex]\hline 
 		\hline \\[-1.8ex] 
 		& Mean & Serial Correlation & Volatility \\ 
@@ -260,12 +267,12 @@ We first simulate this AR(1) process for $1000, 5000,$and $10000$ steps. The res
 		\hline \\[-1.8ex] 
 	\end{tabular}
 	\caption{AR(1) Summary statistics}  
+		\label{table:ar1_summary} 
 \end{table}  
 
-After simulating the $AR(1)$ process we simulate the Markov chains for 5 grid points and 1,000, 5,000, and 10,000 simulations then for 9 grid points and 1,000, 5,000, and 10,000 simulations. The results are shown in the table below \ref{tab:markov_chain_tab}. We see that our Markov simulations match the mean of the $AR(1)$ process well. However, the serial correlation is low relative to our $AR(1)$ process, but when we increase the number of grid points our Markov chain does a better job matching the autocorrelation. We see a similar patter for the volatility of the process. 
+After simulating the $AR(1)$ process we simulate the Markov chains for 5 grid points and 1,000, 5,000, and 10,000 simulations then for 9 grid points and 1,000, 5,000, and 10,000 simulations. The results are reported in Table \ref{table:markov_chain_tab}. We see that our Markov simulations match the mean of the $AR(1)$ process well. However, the serial correlation is low relative to our $AR(1)$ process. When we increase the number of grid points of $y$, our Markov chain does a better job matching the autocorrelation. We see a similar pattern for the volatility of the process. 
 
 \begin{table}[!htbp] \centering 
-	\label{tab:markov_chain_tab} 
 	\begin{tabular}{@{\extracolsep{5pt}} c|ccc} 
 		\\[-1.8ex]\hline 
 		\hline \\[-1.8ex] 
@@ -280,16 +287,21 @@ After simulating the $AR(1)$ process we simulate the Markov chains for 5 grid po
 		\hline \\[-1.8ex] 
 	\end{tabular} 
 	\caption{Markov Simulation Summary Statistics} 
+		\label{table:markov_chain_tab} 
 \end{table}
 
 \section*{Problem 2}
-Assume preferences are CES/CRRA with an IES of $0.5$, $\beta = 0.95$, and $R = 1.04$. Value function iteration is shown in the code attached. This leads to figures (\ref{fig:51gridpoints}) and (\ref{fig:101gridpoints}).\\
+Assume preferences are CES/CRRA with an IES of $0.5$, $\beta = 0.95$, and $R = 1.04$. \\
+\paragraph{a-b)} Compute the value function for this problem assuming a discrete grid of 51 then 101 equally spaced points for $k$. Plot the value function as a function of current $k$, holding $y$ at its mean and when $y$ is one standard deviation above its mean. \\
+ 
+See code attached for the Matlab implementation. The results of the value function iteration are shown in Figures \ref{fig:51gridpoints} and \ref{fig:101gridpoints}
+
 
 \begin{figure*}[htb!]
 	\centering
 	\includegraphics[height=2.5in]{value_function_51_gridpoints.eps}
 	\caption{51 gridpoints}
-		\label{fig:51gridpoints}
+	\label{fig:51gridpoints}
 \end{figure*}
 
 \begin{figure*}[t!]
@@ -299,25 +311,36 @@ Assume preferences are CES/CRRA with an IES of $0.5$, $\beta = 0.95$, and $R = 1
 	\label{fig:101gridpoints}
 \end{figure*}
 
-We can then use our value function to solve for optimal consumption and saving as a function of $k$. We compute this for 50 and 101 gridpoints for $k$ as shown in figures (\ref{fig:kp51gridpoints}) and (\ref{fig:kp101gridpoints}). We see that these plots are kinked, but are becoming smoother as we increase the number of grid points for k. If we increase the number of grid points to a large enough number, these will smooth out. \\
+\paragraph{c)} Plot optimal consumption and saving decisions as a function of $k$ when $y$ is at its mean and one standard deviation above its mean. \\
+
+We use our value function to solve for optimal consumption and saving as a function of $k$. We compute this for 50 and 101 grid points for $k$ as shown in figures (\ref{fig:kp51gridpoints}) and (\ref{fig:kp101gridpoints}). We see that these plots are kinked, but are becoming smoother as we increase the number of grid points for k as shows in Figure (\ref{fig:kp2001gridpoints}). We also see that draws into the state with higher income shift the functions up (although this is somewhat difficult to see on the scale of $kp$).  \\
 
 
 
 \begin{figure*}[t!]
 	\centering
-	\includegraphics[height=2.5in]{k_and_p_51_gridpoints.eps}
+	\includegraphics[height=3.5in]{opt_c_and_kp_51_gridpoints.eps}
 	\caption{51 gridpoints}
 	\label{fig:kp51gridpoints}
 \end{figure*}
 
 \begin{figure*}[t!]
 	\centering
-	\includegraphics[height=2.5in]{k_and_p_101_gridpoints.eps}
+	\includegraphics[height=3.5in]{opt_c_and_kp_101_gridpoints.eps}
 	\caption{101 gridpoints}
 	\label{fig:kp101gridpoints}
 \end{figure*}
 
-With our optimal consumption and savings decision rules we can simulate this economy using the AR(1) process specified above. We simulate the economy for 51 grid points for 5500 and 10500 periods (dropping the first 500 observations) then do the same for 101 grid points.  The table labeled Economy Simulation Summary Statistic compares the time series average, standard deviation, and persistance of consumption growth across the simulations. 
+\begin{figure*}[t!]
+	\centering
+	\includegraphics[height=3.5in]{opt_c_and_kp_2001_gridpoints.eps}
+	\caption{2001 gridpoints}
+	\label{fig:kp2001gridpoints}
+\end{figure*}
+\newpage
+\paragraph{d)} Simulate this economy for 5500 and 10500 periods. Drop the first 500 observations in each simulation. Compare the time series average, standard deviation, and persistence of consumption growth across the two simulations. \\
+
+With our optimal consumption and savings decision rules we can simulate this economy using the AR(1) process specified above. We simulate the economy for 51 grid points for 5500 and 10500 periods (dropping the first 500 observations) then do the same for 101 grid points.  Table \ref{table:Simulations}	 compares the time series average, standard deviation, and persistence of consumption growth across the simulations. Once again, the code to implement the simulations is attached. Figures \ref{fig:sim5500} and \ref{fig:sim10500} show the simulations. 
 \begin{table}[!htbp] \centering 
 
 	\begin{tabular}{@{\extracolsep{5pt}} c|ccc} 
@@ -332,8 +355,22 @@ With our optimal consumption and savings decision rules we can simulate this eco
 		\hline \\[-1.8ex] 
 	\end{tabular} 
 	\caption{Economy Simulation Summary Statistics} 
+	\label{table:Simulations}
 \end{table}
 
+\begin{figure*}[t!]
+	\centering
+	\includegraphics[height=3.5in]{simulations5500.png}
+	\caption{5000 simulations}
+	\label{fig:sim5500}
+\end{figure*}
+
+\begin{figure*}[t!]
+	\centering
+	\includegraphics[height=3.5in]{simulations10500.png}
+	\caption{10000 simulations}
+	\label{fig:sim10500}
+\end{figure*}
 \end{document}
 
 

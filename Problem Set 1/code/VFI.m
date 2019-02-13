@@ -11,11 +11,11 @@ ybar = 1;
 beta = 0.95;
 
 % Set grid parameters
-nk =  51 + 1;
+nk =  2000 + 1;
 kbarstate = 0.5 * (nk - 1) + 1;
-kbar = 5;
-kmin = 4;
-kmax = 6;
+kbar = 0;
+kmin = -10;
+kmax = 10;
 kstep = (kmax - kmin)/(nk - 1);
 
 k = [kmin: kstep: kmax]';                       % Grid for current wealth
@@ -37,7 +37,7 @@ for ngridpoints = [5 9]
     %y = exp(logy);
     y = logy
     
-    for n = [1000 5000 100000]
+    for n = [1000 5000 10000]
         % set parameters for size of chain
         nsim = n;
         income_state = zeros(1,nsim);
@@ -147,7 +147,7 @@ plot(k, V0(:,5), k, V0(:, 6))
 legend('ybar', 'ybar + 1*sd')
 xlabel('k');
 ylabel('Value function');
-saveas(gcf, 'value_functions_51_grid_points.png')
+saveas(gcf,sprintf('value_functions_gridpoints%d.png',nk)); 
 
 % calculate policy function for kp
 kp = k(kpopt_ind);
@@ -167,13 +167,14 @@ xlabel('k') ;
 ylabel('kp');
 legend('kp(k, ybar)', 'kp(k, ybar + \sigma_y)')
 
+
 subplot(2, 1, 2);
 plot(k, c_policy(:, 5), k, c_policy(:, 6));
 title('Consumption');
 xlabel('k') ;
 ylabel('c');
-legend('c(ybar)', 'c(ybar + \sigma_y')
-saveas(gcf, 'c_and_k_101.png')
+legend('c(ybar)', 'c(ybar + \sigma_y)');
+saveas(gcf,sprintf('c_and_k_gridpoints%d.png',nk)); 
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % simulate  economy with given y process and policy functions %
@@ -231,5 +232,36 @@ for n = [5500, 10500]
     acf = autocorr(c_growth, 'NumLags', 1);
     simulation_summary_stats(3, j) = acf(2);
     
+    % calculate consumption growth 
+    simulation_summary_stats(1, j) = mean(c_growth);
+    simulation_summary_stats(2, j) = std(c_growth);
+    acf = autocorr(c_growth, 'NumLags', 1);
+    simulation_summary_stats(3, j) = acf(2);
+    
+    
+    
+    subplot(2, 2, 1);
+    plot(y_markov);
+    title('y simulation');
+    ylabel('y');
+    
+    subplot(2, 2, 2);
+    plot(kp_sim);
+    title('kp simulation');
+    ylabel('kp');
+
+
+    subplot(2, 2, 3);
+    plot(c_sim);
+    title('Consumption simulation');
+    ylabel('c');
+    
+    subplot(2, 2, 4);
+    plot(c_growth);
+    title('Simulated consumption growth');
+    ylabel('\Delta c');
+    saveas(gcf,sprintf('simulations%d.png',nsim)); 
+    
+
     j = j+ 1;
 end
