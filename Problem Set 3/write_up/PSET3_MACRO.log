@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.4)  27 MAR 2019 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.4)  27 MAR 2019 22:20
 entering extended mode
 **./PSET3_MACRO.tex
 (PSET3_MACRO.tex
@@ -795,55 +795,51 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
 
  []
 
-<solow_growth_alpha_low.png, id=31, 803.0pt x 602.25pt>
+[4] [5] <solow_growth_alpha_low.png, id=34, 803.0pt x 602.25pt>
 File: solow_growth_alpha_low.png Graphic file (type png)
 
 <use solow_growth_alpha_low.png>
-Package pdftex.def Info: solow_growth_alpha_low.png used on input line 220.
+Package pdftex.def Info: solow_growth_alpha_low.png used on input line 242.
 (pdftex.def)             Requested size: 236.01561pt x 177.00974pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
-
- []
-
-[5] <solow_growth_alpha_high.png, id=37, 803.0pt x 602.25pt>
+<solow_growth_alpha_high.png, id=36, 803.0pt x 602.25pt>
 File: solow_growth_alpha_high.png Graphic file (type png)
 
 <use solow_growth_alpha_high.png>
-Package pdftex.def Info: solow_growth_alpha_high.png used on input line 229.
+Package pdftex.def Info: solow_growth_alpha_high.png used on input line 251.
 (pdftex.def)             Requested size: 236.01561pt x 177.00974pt.
- [6 <./solow_growth_alpha_low.png> <./solow_growth_alpha_high.png>] (PSET3_MACR
-O.aux) ) 
+ [6 <./solow_growth_alpha_low.png>] [7 <./solow_growth_alpha_high.png>] (PSET3_
+MACRO.aux) ) 
 Here is how much of TeX's memory you used:
  26227 strings out of 493323
- 650526 string characters out of 3139067
+ 650534 string characters out of 3139067
  862226 words of memory out of 3000000
  29275 multiletter control sequences out of 15000+200000
  12160 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,20n,98p,765b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on PSET3_MACRO.pdf (6 pages, 226060 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on PSET3_MACRO.pdf (7 pages, 232169 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  10263 words of extra memory for PDF output out of 12000 (max. 10000000)
 
