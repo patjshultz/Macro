@@ -156,18 +156,19 @@ solve(t(lag)%*%lag)%*%t(lag)%*%y
 # b) Detrend the data using the HP filter
 #===============================================================================
 
-
 colnames(hoursQ_PW) <- c("dates", "H")
 # first merge all data from previous section to a single dataframe with a shared date vector
 hoursQ_PW$dates <- as.yearqtr(hoursQ_PW$date)
 Qdata_PW$dates <- as.yearqtr(Qdata_PW$dates)
-str(Qdata_PW); str(TFP_shocks); str(hoursQ_PW)
+str(Qdata_PW); str(TFP_shocks); str(hoursQ_PW); str(pop_hours)
 
 # remove everything from the environment exepct for a dataframe of all qrtly data
-tfp_data <- Reduce(merge, list(hoursQ_PW, Qdata_PW, TFP_shocks))
+tfp_data <- Reduce(merge, list(hoursQ_PW, Qdata_PW, TFP_shocks, pop_hours))
+str(tfp_data)
 dates <- tfp_data$dates
-rm(list=setdiff(ls(), c("dates", "tfp_data")))
+rm(list=setdiff(ls(), c("dates", "tfp_data", "alpha"))); 
 colnames(tfp_data)
+nobs <- nrow(tfp_data)
 
 # HP filter of output
 hpY <- hpfilter(x = log(tfp_data$Y), type = "lambda", freq = 1600, drift = T)
@@ -276,4 +277,16 @@ acf(fit_AR2$residuals)
 ar(x = lnA_cycle, order.max = 1, method = "ols")
 fit_AR1 <- summary(lm(SR ~ SR1 + 0))
 acf(fit_AR1$residuals)
+
+#===============================================================================
+# c) Calibrate psi, so steady state value matches psi in the data
+#===============================================================================
+
+hrs_per_q <- 24 * 30.5 * 3
+Hss <- mean(tfp_data$H/ hrs_per_q)
+YCss <- mean(tfp_data$Y/tfp_data$C)
+yss <- mean(tfp_data$Y*10^9/tfp_data$N)
+
+psi_KPR <- alpha * (YCss) * ((1 - Hss)/Hss)
+psi_GHH <- alpha * (yss / mean(tfp_data$H)^1.5)
 

@@ -1,12 +1,20 @@
-function F = modelsteady(delta, gamma, alpha, bbeta, kss, hss, ies)
+function F = modelsteady_tbd(delta, alpha, bbeta, hss, gamma)
 
 % Write down equations to compute steady state values for the deterministic model
-% Make sure to solve for 9 variables (rss iss yss css wss abar theta eta
+% Make sure to solve for 9 variables (rss iss yss css wss abar psi
 % lambdass)
 
 rss = 1/bbeta - (1 - delta);
-%missing remaining equations
+kss = (rss / ((1 - alpha) * hss^alpha))^(-1/alpha);
+iss = (gamma - 1 + delta) * kss;
+yss = kss^(1-alpha) * hss^(alpha);
+css = yss - iss;
+wss = alpha * (kss^(1-alpha)) * hss ^(alpha-1);
+abar = 0;
+psi =  alpha * (yss/css)*((1-hss)/hss);
+lambdass = 1/css;
+
 
 % Define output vector
-%     1   2   3   4   5    6    7    8      9      
-F = [rss iss yss css wss abar theta eta lambdass]';
+%     1   2   3   4   5   6   7     8     9        
+F = [rss iss yss css kss wss abar psi  lambdass]';

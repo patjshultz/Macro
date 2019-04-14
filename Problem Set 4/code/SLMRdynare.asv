@@ -19,14 +19,16 @@ format shortg
 %==================================================================
 
 delta=  0.025;                % depreciation rate of capital
-gamma = 1.008;                % steady-state growth rate
-alpha = 2/3;                 % Labor share of income
+gamma = 1.005;                % steady-state growth rate
+alpha = 0.65;                 % Labor share of income
 
 bbeta=  0.99;                % household discout factor
+%eta = 1;                      % Power in momentary utility function
+%theta = 0.5;                  % consumption weight in Cobb-Douglas utility function
 
-rho_a =  0.6;                % persistence of productivity shock
-sigma_a =  0.0066;             % volatility of productivity shock. 
-%abar= 0;                     % log mean of productivity shock
+rho_a =  0.95;                % persistence of productivity shock
+sigma_a =  0.007;             % volatility of productivity shock. 
+abar= 0;                     % log mean of productivity shock
 
 %{
 rho_g =  0.95;                % persistence of government shock
@@ -35,7 +37,9 @@ gy= 1/6;                      % mean government to GDP
 %}
 
 % steady state targets
-hss = 0.24;                      % target steady-state hours
+hss = 1/3;                      % target steady-state hours
+ies = 0.2;                      % target IES
+kss = 1;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% =======================================================================
@@ -47,10 +51,10 @@ steady = modelsteady_tbd(delta, alpha, bbeta, hss, gamma)
 
 % Steady-state quantities:
 rss = steady(1,1);                              
-iss = steady(2,1); 
-yss = steady(3,1);                              
-css = steady(4,1); 
-kss = steady(5,1);                              
+kss = steady(2,1); 
+iss = steady(3,1);                              
+yss = steady(4,1); 
+css = steady(5,1);                              
 wss= steady(6,1); 
 abar = steady(7,1);                                  
 psi = steady(8,1); 
@@ -71,7 +75,7 @@ fprintf(fid, '\n');
 fprintf(fid, 'parameters bbeta psi alpha delta gamma abar rho_a sigma_a; \n');
 fprintf(fid, '\n');
 fprintf(fid, 'bbeta = %3.6f;\n',bbeta);
-fprintf(fid, 'psi = %3.6f;\n',psi);
+fprintf(fid, 'eta = %3.6f;\n',psi);
 fprintf(fid, 'alpha = %3.6f;\n',alpha);
 fprintf(fid, 'delta = %3.6f;\n',delta);
 fprintf(fid, 'gamma = %3.6f;\n',gamma);
@@ -95,14 +99,13 @@ fprintf(fid, '\n');
 
 fprintf(fid, 'model;\n');
 fprintf(fid, '1/exp(c) = exp(lambda);\n');
-fprintf(fid, 'gamma = (bbeta/gamma) * (exp(c)/exp(c(+1))) *((1-alpha) * exp(a(+1)) * exp(k)^(-alpha) * exp(h)^alpha + (1-delta));\n');
-fprintf(fid, 'psi/(1-exp(h)) = (1/exp(c)) * (alpha * exp(a) * exp(k)^(1-alpha) * exp(h)^(alpha-1));\n');
+fprintf(fid, 'gamma = (beta/gamma) * (exp(c)/exp(c(+1) *((1-alpha) * exp(a(+1)) * exp(k)^(-alpha) * h(+1)^alpha + (1-delta));\n');
+fprintf(fid, 'psi/(1-exp(h)) = (1/exp(c)) * (alpha * exp(a) * exp(k)^(1-alpha) * exp(h)^(1-alpha);\n');
 fprintf(fid, 'exp(a)*k(-1)^(1-alpha)*exp(h)^(alpha) + (1-delta) *exp(k(-1)) - exp(k) *gamma = exp(c);\n');
-fprintf(fid, 'a = rho_a * a(-1) + sigma_a * eps;\n');
+fprintf(fid, 'a = rho_a * a(-1) + sigma_a;\n');
 fprintf(fid, 'exp(y) = exp(a)*(exp(k(-1)))^(alpha) * exp(h)^(1-alpha);\n');
 fprintf(fid, 'exp(y) = exp(c)+exp(i);\n');
-fprintf(fid, 'exp(w) = alpha * exp(a) * exp(k(-1))^(1-alpha) * exp(h)^(alpha-1);\n');
-fprintf(fid, 'exp(r) = (1-alpha) * exp(a) * exp(k(-1))^(-alpha)*exp(h)^alpha;\n');
+
 fprintf(fid, 'end;\n');
 
 fprintf(fid, '\n');
@@ -126,7 +129,7 @@ printu=1;  %this NEEDs to be updated, indexes have shifted
 
 if printu==1 
 sdout=(diag(oo_.var(1:9,1:9)))'.^.5;
-siy=sdout(3)/sdout(2); 
+siy=sdout(3)/sdout(2);
 scy=sdout(5)/sdout(2);
 shy=sdout(6)/sdout(2);
 swy=sdout(8)/sdout(2);
