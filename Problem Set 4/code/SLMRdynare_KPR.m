@@ -95,14 +95,14 @@ fprintf(fid, '\n');
 
 fprintf(fid, 'model;\n');
 fprintf(fid, '1/exp(c) = exp(lambda);\n');
-fprintf(fid, 'gamma = (bbeta/gamma) * (exp(c)/exp(c(+1))) *((1-alpha) * exp(a(+1)) * exp(k)^(-alpha) * exp(h)^alpha + (1-delta));\n');
+fprintf(fid, 'gamma = (bbeta/gamma) * (exp(c)/exp(c(+1))) *((1-alpha) * exp(a(+1)) * exp(k)^(-alpha) * exp(h(+1))^alpha + (1-delta));\n');
 fprintf(fid, 'psi/(1-exp(h)) = (1/exp(c)) * (alpha * exp(a) * exp(k)^(1-alpha) * exp(h)^(alpha-1));\n');
-fprintf(fid, 'exp(a)*k(-1)^(1-alpha)*exp(h)^(alpha) + (1-delta) *exp(k(-1)) - exp(k) *gamma = exp(c);\n');
-fprintf(fid, 'a = rho_a * a(-1) + sigma_a * eps;\n');
-fprintf(fid, 'exp(y) = exp(a)*(exp(k(-1)))^(alpha) * exp(h)^(1-alpha);\n');
-fprintf(fid, 'exp(y) = exp(c)+exp(i);\n');
+fprintf(fid, 'exp(a)*k(-1)^(1-alpha)*exp(h)^(alpha) + (1-delta) * exp(k(-1)) - exp(k) * gamma = exp(c);\n');
+fprintf(fid, 'a = abar + rho_a * a(-1) + sigma_a * eps;\n');
+fprintf(fid, 'exp(y) = exp(a)*(exp(k(-1)))^(1-alpha) * exp(h)^(alpha);\n');
+fprintf(fid, 'exp(y) = exp(c) + exp(i);\n');
 fprintf(fid, 'exp(w) = alpha * exp(a) * exp(k(-1))^(1-alpha) * exp(h)^(alpha-1);\n');
-fprintf(fid, 'exp(r) = (1-alpha) * exp(a) * exp(k(-1))^(-alpha)*exp(h)^alpha;\n');
+fprintf(fid, 'exp(r) = (1-alpha) * exp(a) * exp(k(-1))^(-alpha) * exp(h)^alpha;\n');
 fprintf(fid, 'end;\n');
 
 fprintf(fid, '\n');
@@ -110,7 +110,8 @@ fprintf(fid, 'shocks;\n');
 fprintf(fid, 'var eps = 1; \n');
 fprintf(fid, 'end;\n');
 fprintf(fid, 'steady;\n');
-fprintf(fid, 'stoch_simul(order=1,graph,hp_filter=1600);\n');
+fprintf(fid,'options_.TeX = 1;\n');
+fprintf(fid, 'stoch_simul(order=1,graph,hp_filter=1600, irf = 60);\n');
 fclose(fid);
 
 %% ===========================================================
@@ -122,27 +123,41 @@ fclose(fid);
 %%=======================
 %  Customized output
 %%========================
-printu=1;  %this NEEDs to be updated, indexes have shifted
+ printu=1;  %this NEEDs to be updated, indexes have shifted
 
-if printu==1 
-sdout=(diag(oo_.var(1:9,1:9)))'.^.5;
-siy=sdout(3)/sdout(2); 
-scy=sdout(5)/sdout(2);
-shy=sdout(6)/sdout(2);
-swy=sdout(8)/sdout(2);
+ if printu==1 
+ sdout=(diag(oo_.var(1:9,1:9)))'.^.5;
+ siy=sdout(3)/sdout(2); 
+ scy=sdout(5)/sdout(2);
+ shy=sdout(6)/sdout(2);
+ swy=sdout(8)/sdout(2);
+ 
+ disp( '         std/stdy') 
+ disp([M_.endo_names(1,:) num2str(sdout(1),3) ])
+ disp([ M_.endo_names(2,:) num2str(sdout(2),3)  ])
+ disp([M_.endo_names(3,:) num2str(siy,3) ])
+ disp([ M_.endo_names(5,:) num2str(scy,2)  ])
+ disp([ M_.endo_names(6,:) num2str(shy,2)  ])
+ disp([ M_.endo_names(8,:) num2str(swy,2)  ])
 
-disp( '         std') 
-disp([M_.endo_names(1,:) num2str(sdout(1),3) ])
-disp([ M_.endo_names(2,:) num2str(sdout(2),3)  ])
-disp([M_.endo_names(3,:) num2str(siy,3) ])
-disp([ M_.endo_names(5,:) num2str(scy,2)  ])
-disp([ M_.endo_names(6,:) num2str(shy,2)  ])
-disp([ M_.endo_names(8,:) num2str(swy,2)  ])
-end
-
-
-checku=0;   %set to for checks on steady state
-if checku==1
+ si=sdout(3); 
+ sc=sdout(5);
+ sh=sdout(6);
+ sw=sdout(8);
+ 
+  
+ disp( '         std') 
+ disp([M_.endo_names(1,:) num2str(sdout(1),3) ])
+ disp([ M_.endo_names(2,:) num2str(sdout(2),3)  ])
+ disp([M_.endo_names(3,:) num2str(si,3) ])
+ disp([ M_.endo_names(5,:) num2str(sc,2)  ])
+ disp([ M_.endo_names(6,:) num2str(sh,2)  ])
+ disp([ M_.endo_names(8,:) num2str(sw,2)  ])
+ end
+ 
+% 
+ checku=0;   %set to for checks on steady state
+ if checku==1
 
 
 ssve=[1

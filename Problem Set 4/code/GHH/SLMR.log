@@ -1,0 +1,73 @@
+Starting Dynare (version 4.5.7).
+Starting preprocessing of the model file ...
+Found 9 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+MODEL SUMMARY
+
+  Number of variables:         9
+  Number of stochastic shocks: 1
+  Number of state variables:   2
+  Number of jumpers:           2
+  Number of static variables:  6
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables         eps
+eps          1.000000
+
+POLICY AND TRANSITION FUNCTIONS
+                                   a               y               i               k               c               h               r               w          lambda
+Constant                           0        0.063801       -0.155691        0.999253       -1.560374       -1.807117       -2.969522        0.529991        3.722820
+k(-1)                              0        0.799997        0.834769        0.982457        0.658325        0.400000       -0.399998        0.200000       -1.106984
+a(-1)                       0.600000        0.839997        0.810952        0.044692        0.958329        0.720000        1.079995        0.360000       -0.022385
+eps                         0.006600        0.009240        0.008920        0.000492        0.010542        0.007920        0.011880        0.003960       -0.000246
+
+
+THEORETICAL MOMENTS (HP filter, lambda = 1600)
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+a              0.0000     0.0071     0.0001
+y              0.0638     0.0098     0.0001
+i             -0.1557     0.0095     0.0001
+k              0.9993     0.0012     0.0000
+c             -1.5604     0.0112     0.0001
+h             -1.8071     0.0085     0.0001
+r             -2.9695     0.0129     0.0002
+w              0.5300     0.0042     0.0000
+lambda         3.7228     0.0013     0.0000
+
+
+
+MATRIX OF CORRELATIONS (HP filter, lambda = 1600)
+Variables         a       y       i       k       c       h       r       w  lambda
+a            1.0000  0.9952  0.9944  0.2572  0.9975  0.9984  0.9993  0.9984 -0.0165
+y            0.9952  1.0000  1.0000  0.3503  0.9996  0.9992  0.9909  0.9992 -0.1141
+i            0.9944  1.0000  1.0000  0.3578  0.9994  0.9988  0.9898  0.9988 -0.1220
+k            0.2572  0.3503  0.3578  1.0000  0.3245  0.3116  0.2211  0.3116 -0.9705
+c            0.9975  0.9996  0.9994  0.3245  1.0000  0.9999  0.9942  0.9999 -0.0867
+h            0.9984  0.9992  0.9988  0.3116  0.9999  1.0000  0.9956  1.0000 -0.0732
+r            0.9993  0.9909  0.9898  0.2211  0.9942  0.9956  1.0000  0.9956  0.0207
+w            0.9984  0.9992  0.9988  0.3116  0.9999  1.0000  0.9956  1.0000 -0.0732
+lambda      -0.0165 -0.1141 -0.1220 -0.9705 -0.0867 -0.0732  0.0207 -0.0732  1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION (HP filter, lambda = 1600)
+Order          1       2       3       4       5
+a         0.4653  0.1538 -0.0220 -0.1153 -0.1587
+y         0.4732  0.1640 -0.0125 -0.1079 -0.1539
+i         0.4743  0.1653 -0.0113 -0.1070 -0.1533
+k         0.9041  0.7192  0.5050  0.2951  0.1075
+c         0.4701  0.1600 -0.0162 -0.1108 -0.1558
+h         0.4689  0.1584 -0.0178 -0.1120 -0.1566
+r         0.4646  0.1529 -0.0229 -0.1160 -0.1592
+w         0.4689  0.1584 -0.0178 -0.1120 -0.1566
+lambda    0.9260  0.7474  0.5313  0.3156  0.1208
+Total computing time : 0h00m01s

@@ -290,3 +290,41 @@ yss <- mean(tfp_data$Y*10^9/tfp_data$N)
 psi_KPR <- alpha * (YCss) * ((1 - Hss)/Hss)
 psi_GHH <- alpha * (yss / mean(tfp_data$H)^1.5)
 
+#===============================================================================
+# f) download data on government expenditures 
+#===============================================================================
+getSymbols("W068RCQ027SBEA", src='FRED') 
+G <- data.frame(dates = as.yearqtr(index(W068RCQ027SBEA)), G= W068RCQ027SBEA)
+colnames(G) <- c("dates", "G")
+
+# merge government data to old data
+GY <- merge(G, tfp_data, by = "dates")
+nobs <- nrow(GY)
+mean(GY$G/GY$Y)
+
+
+# use the hp filter to calculate the cycle and trend of gov. expendtiture
+hpG<- hpfilter(x = log(GY$G), type = "lambda", freq = 1600, drift = F)
+tcG <- data.frame(date = GY$dates, tG = hpG$trend, cG = hpG$cycle)
+ggplot(data = tcG, aes(x = date, y = tG))+
+  geom_line(color = "blue", size = 2) +
+  ggtitle("Trend Gov. Exp.")
+
+ggplot(data = tcG, aes(x = date, y = cG))+
+  geom_line(color = "blue", size = 2)   +
+  ggtitle("Cycle Gov. Exp")
+
+# using HP filtered cycle series, estimate an AR(1) process for detrended level of g
+Glead <- hpG$cycle[2:nobs]
+Glag <- hpG$cycle[1:(nobs-1)]
+fit <- summary(lm(Glead ~ Glag))
+
+sd(fit$residuals)
+#
+t <- matrix( data = c("a" ,    0.00711,
+"y",     0.0126,
+"i" ,    1.82,
+"c"  ,   0.14,
+"h",     0.66,
+"w"  ,   0.35), ncol = 2)
+
